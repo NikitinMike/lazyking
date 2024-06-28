@@ -12,7 +12,7 @@ import java.util.*;
  *
  * У короля разболелась голова. Что с этими данными делать, король не знал и делегировал задачу невезучему слуге.
 
- * Помогите слуге правильно составить иерархию и подготовить  отчет для короля следующим образом:
+ * Помогите слуге правильно составить иерархию и подготовить отчет для короля следующим образом:
  *
  * король
  *     дворянин Кузькин
@@ -69,10 +69,10 @@ class UnluckyVassal {
         TreeMap<String,String> vassals = new TreeMap<>();
         String king = "КОРОЛЬ";
         for (String pollResult : pollResults) {
-            String[] record = pollResult.split("[:]");
+            String[] record = pollResult.split(":");
             String master = record[0].trim();
             if (record.length > 1)
-                for (String person : record[1].split("[,]"))
+                for (String person : record[1].split(","))
                     vassals.put(person.trim(),master);
             vassals.putIfAbsent(master,king);
         }

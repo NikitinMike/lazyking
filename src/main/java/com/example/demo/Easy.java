@@ -36,9 +36,8 @@ public class Easy {
             map.put("second", "Mila");
             map.put("third", "Ramu");
 
-            //ключ
-            //значение
-            map.entrySet().forEach(p -> out.printf("%s:%s%n", p.getKey(), p.getValue()));
+            //ключ значение
+            map.forEach((key, value) -> out.printf("%s:%s%n", key, value));
         }
     }
 }
